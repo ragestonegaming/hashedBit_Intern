@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tax Calculator</h1>
+    <input type="number" id="salary" placeholder="Enter your salary" required>
+    <button onclick="calculateTax()">Calculate Tax</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function findTax(salary) {
+            let taxRate;
+            let taxAmount;
+
+            
+            switch (true) {
+                case (salary > 0 && salary <= 500000):
+                    taxRate = 0;
+                    break;
+                case (salary > 500000 && salary <= 1000000):
+                    taxRate = 0.10; 
+                    break;
+                case (salary > 1000000 && salary <= 1500000):
+                    taxRate = 0.20; 
+                    break;
+                case (salary > 1500000):
+                    taxRate = 0.30; 
+                    break;
+                default:
+                    return 'Invalid salary amount.';
+            }
+
+           
+            taxAmount = salary * taxRate;
+            return taxAmount;
+        }
+
+        function calculateTax() {
+            const salary = parseFloat(document.getElementById("salary").value);
+            const taxAmount = findTax(salary);
+            document.getElementById("result").innerText = "Tax Amount: " + taxAmount;
+        }
+    </script>
+</body>
+</html>

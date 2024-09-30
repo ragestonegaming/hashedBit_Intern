@@ -1,0 +1,53 @@
+.container {
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+  }
+  
+  .movie-card {
+    background-color: #ffffff; /* White background for movie card */
+    border: 1px solid #ddd; /* Light border for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.2s; /* Smooth transform on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .movie-image {
+    width: 100%; /* Make the image fill the card */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .movie-title {
+    text-align: center; /* Center the title */
+    padding: 10px; /* Padding for spacing */
+  }
+  
+  .detailsLink {
+    display: inline-block; /* Make it inline-block */
+    margin: 10px; /* Add some margin */
+    padding: 8px 16px; /* Padding for the button */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Text color */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .detailsLink:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
